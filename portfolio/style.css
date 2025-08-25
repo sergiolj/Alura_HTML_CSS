@@ -1,13 +1,63 @@
+/*RESET CSS - Usando apenas o "*" podemos modificar definições gerais do CSS padrão */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    display: flex;
+    height: 100vh; /*Altura 100% da Viewport Height vh*/
+     width: 100%;
+     box-sizing: border-box; /*Essa característica impede que os elementos filhos ultrapassem os limites dos elementos pai*/
+    /* box-sizing: content-box; Já essa opção permite que os elementos filho sejam maiores que os elementos pai. */
     background-color: black;
     color: #F6F6F6;
-    width: 1200px;
-    justify-content: center;
+    justify-content: space-between;
 }
-/*O # é usado para designar um id enquanto o . designa uma classe*/
-#titleStrong{
-    color: #22D4FD;
+
+.presentation{  
+    margin: 10%; /*Margem relativa aos limites da viewport*/
+    display: flex;
+    align-items: center;
+    flex-direction: row; /*Define se o alinhamento será em linhas ou colunas*/
+    /*flex-direction: column;*/
+    flex-wrap: nowrap; /*Mantem o alinhamento em uma única linha independente da largura da tela adicionando scrols*/
+    /*flex-wrap: wrap; /*Permite que o layout seja organizado para criar novas linhas conforme o tamanho da tela*/
+    justify-content: space-between;
+}
+
+.presentation.content{
+    width: 615px;
+}
+
+.presentation__content_tittle{
+    font-family: "Krona One", sans-serif;
+    font-size: 36px;
+    padding-bottom: 50px; /*Controla o espaço após o h1 com o nome da classe*/
+}
+
+.presentation__content__paragraph{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    padding-bottom: 30px;
+}
+.presentation__links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.presentation__links__buttons{
+    text-align: center;
+    width: 280px;
+    height: 79px;
+    padding: 21.5px 0%; /*A primeira */
+    background: #22D4FD;
+    border-radius: 16px;
+    color: black;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 h1{
@@ -15,22 +65,27 @@ h1{
 }
 
 p{
-    font-family: Montserrat;
+
 }
 
 a{
-display: flex;
-background-color: #22D4FD;
-border-radius: 15px;
-color: black;
-width: 120px;
-height: 50px;
-padding: 6px;
+
 }
 
 a:link{
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
+
 a:visited{
     text-decoration: none;
 }
+
+/*IDS DE ELEMENTOS*/
+/*O # é usado para designar um id enquanto o . designa uma classe*/
+#titleStrong{
+    color: #22D4FD;
+}
+
+
