@@ -8,8 +8,10 @@
 
 body{
     height: 100vh; /*Altura 100% da Viewport Height vh*/
-     width: 100%;
-     box-sizing: border-box; /*Essa característica impede que os elementos filhos ultrapassem os limites dos elementos pai*/
+    width: 100%; /*Em telas menores do que a max-width usa 100% da tela*/
+    max-width: 1200px; /* Impede o uso de espaçamentos maiores em telas de maior dimensão definindo a largura máxima do container*/
+    margin: 0 auto; /*Define margens com a primeira informação para inferior e superior e a segunda para esquerda e direita*/
+    box-sizing: border-box; /*Essa característica impede que os elementos filhos ultrapassem os limites dos elementos pai*/
     /* box-sizing: content-box; Já essa opção permite que os elementos filho sejam maiores que os elementos pai. */
     background-color: black;
     color: #F6F6F6;
@@ -27,37 +29,49 @@ body{
     justify-content: space-between;
 }
 
-.presentation.content{
+.presentation__content{
     width: 615px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
 }
 
-.presentation__content_tittle{
+.presentation__content__tittle{
     font-family: "Krona One", sans-serif;
     font-size: 36px;
-    padding-bottom: 50px; /*Controla o espaço após o h1 com o nome da classe*/
+    font-weight: 400;
 }
 
 .presentation__content__paragraph{
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
-    padding-bottom: 30px;
 }
+
 .presentation__links{
+    max-height: 79px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .presentation__links__buttons{
-    text-align: center;
+    align-items: center; /*Propriedade do modelo de layout display Flexbox que determinou o alinhamento vertital do texto.*/
+    /*text-align: center; Esse é um estilo só aplicável em elementos definidos como display: block e não funciona em display: flex*/
     width: 280px;
-    height: 79px;
-    padding: 21.5px 0%; /*A primeira */
+    box-sizing: border-box; /*Não permite que os elementos filho avancem além do elemento pai*/
+    padding: 21px auto;
     background: #22D4FD;
     border-radius: 16px;
     color: black;
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    padding: 25px;
+}
+
+.Imagem{
+    padding: 30px;
 }
 
 h1{
