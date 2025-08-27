@@ -19,7 +19,7 @@ body{
 }
 
 .presentation{  
-    margin: 10%; /*Margem relativa aos limites da viewport*/
+    margin: 10% 15%; /*Margem relativa aos limites da viewport*/
     display: flex;
     align-items: center;
     flex-direction: row; /*Define se o alinhamento será em linhas ou colunas*/
@@ -33,7 +33,10 @@ body{
     width: 615px;
     display: flex;
     flex-direction: column;
-    row-gap: 40px;
+    row-gap: 40px;/*O gap não é uma tag específica do flexbox, mas é comumente usada em conjunto com ele para determinar espaçamento entre linhas e colunas
+    podendo ser usado para o mesmo fim com grid, flex ou multi-column. Aceita um ou dois valores.*/
+    /*https://css-tricks.com/ Para artigos sobre dicas de css*/
+    /*https://www.alura.com.br/artigos/css-guia-do-flexbox Guia da Alura sobre Flexbox*/
 }
 
 .presentation__content__tittle{

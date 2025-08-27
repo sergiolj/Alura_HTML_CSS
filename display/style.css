@@ -1,0 +1,103 @@
+/*Projeto Display*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+/* https://www.figma.com/design/Cr9QIAxQX6tRAmPUMbWh3Y/profile-card--Community-?node-id=1-212&m=dev */
+
+/*RESET*/
+h1, p{
+    margin: 0;
+}
+
+.background__image{
+    width: 100%;
+    max-width: 408px;
+    border-radius: 16px 0 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    max-height: 650px;
+    height: 100%;
+}
+
+p{
+/* Body text small */
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    padding: 0 16px;
+}
+
+h1{
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.presentation__card{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: white;
+    border-radius: 16px ;
+    width: 100%;
+    max-width: 408px;
+    gap: 20px;
+    /*Define espaçamento entre os itens do grid mas não nos espaços iniciais e finais.*/
+    /*padding: 20px 30px; /*Para o espaçamento inicial e final devemos usar o padding com o primeiro valor definindo acima e abaixo e o segundo laterais*/
+    padding-bottom: 30px;
+    padding-inline: 0;
+    position: relative;
+}
+.presentation__details{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: white;
+    border-radius: 16px ;
+    width: 100%;
+    max-width: 408px;
+    gap: 20px;
+}
+
+.emphasize{
+color: #3D7793;
+}
+
+.foto{
+    position: absolute;
+    z-index: 10;
+    padding-top: 120px;
+}
+
+.social__media{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding-bottom: 23.5px;
+}
+
+.contact__button{
+    display: flex;
+    justify-content: center;
+    width: 212px;
+    height: 44px;
+    border-radius: 4px;
+    background: #3D7793;
+    align-items: center;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px 24px;
+}
+a:visited{
+    text-decoration: none;
+}
