@@ -7,30 +7,53 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     height: 100vh; /*Altura 100% da Viewport Height vh*/
     width: 100%; /*Em telas menores do que a max-width usa 100% da tela*/
-    max-width: 1200px; /* Impede o uso de espaçamentos maiores em telas de maior dimensão definindo a largura máxima do container*/
-    margin: 0 auto; /*Define margens com a primeira informação para inferior e superior e a segunda para esquerda e direita*/
-    box-sizing: border-box; /*Essa característica impede que os elementos filhos ultrapassem os limites dos elementos pai*/
+    /*max-width: 1200px; /* Impede o uso de espaçamentos maiores em telas de maior dimensão definindo a largura máxima do container*/
+    /*margin: 0 auto; /*Define margens com a primeira informação para inferior e superior e a segunda para esquerda e direita*/
+    /*box-sizing: border-box; /*Essa característica impede que os elementos filhos ultrapassem os limites dos elementos pai*/
     /* box-sizing: content-box; Já essa opção permite que os elementos filho sejam maiores que os elementos pai. */
     background-color: black;
     color: #F6F6F6;
     justify-content: space-between;
 }
 
-.presentation{  
-    margin: 10% 15%; /*Margem relativa aos limites da viewport*/
+.header{
+    padding: 2% 0% 0% 15% ;/*top right botton left*/
+}
+
+.header__menu{
     display: flex;
-    align-items: center;
-    flex-direction: row; /*Define se o alinhamento será em linhas ou colunas*/
+    justify-content: left;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    color:#22D4FD;
+}
+
+.presentation{  
+    /*margin: 10% 15%; /*Margem relativa aos limites da viewport*/
+    padding: 0% 15%;/*top botton*/
+    height: 100%;
+    display: flex;
+    align-items:center; 
+    justify-content: center;
+    /*flex-direction: row; /*Define se o alinhamento será em linhas ou colunas*/
     /*flex-direction: column;*/
-    flex-wrap: nowrap; /*Mantem o alinhamento em uma única linha independente da largura da tela adicionando scrols*/
+    /*flex-wrap: nowrap; /*Mantem o alinhamento em uma única linha independente da largura da tela adicionando scrols*/
     /*flex-wrap: wrap; /*Permite que o layout seja organizado para criar novas linhas conforme o tamanho da tela*/
-    justify-content: space-between;
+   
 }
 
 .presentation__content{
-    width: 615px;
+    min-width: 615px;
     display: flex;
     flex-direction: column;
     row-gap: 40px;/*O gap não é uma tag específica do flexbox, mas é comumente usada em conjunto com ele para determinar espaçamento entre linhas e colunas
@@ -45,49 +68,62 @@ body{
     font-weight: 400;
 }
 
+/*IDS DE ELEMENTOS*/
+/*O # é usado para designar um id enquanto o . designa uma classe*/
+#titleStrong{
+    color: #22D4FD;
+}
+
 .presentation__content__paragraph{
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
 }
 
 .presentation__links{
+    flex-direction: column;
+    align-items: center;
     max-height: 79px;
     height: 100%;
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 32px;
+}
+
+.presentation__links__subtittle{
+    font-family: "Krona One",  sans-serif;
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .presentation__links__buttons{
+    display: flex;
+    justify-content: center; /*Justificar no eixo principal
+    /*justify-content: space-evenly; /*Justificar no eixo principal*/
+    /*justify-content: space-around; /*Justificar no eixo principal*/
+    gap: 16px;
     align-items: center; /*Propriedade do modelo de layout display Flexbox que determinou o alinhamento vertital do texto.*/
     /*text-align: center; Esse é um estilo só aplicável em elementos definidos como display: block e não funciona em display: flex*/
-    width: 280px;
+    width: 378px;
     box-sizing: border-box; /*Não permite que os elementos filho avancem além do elemento pai*/
-    padding: 21px auto;
-    background: #22D4FD;
-    border-radius: 16px;
-    color: black;
+    padding: 21px;
+    /* background: #22D4FD; Como não há cor de background o mesmo fica transparente*/
+    border-radius: 8px;
+    border: 2px solid #22D4FD;
+    /*Define as características da fonte*/
+    color: #F6F6F6;
     font-size: 24px;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    padding: 25px;
+ 
 }
 
-.Imagem{
-    padding: 30px;
+.presentation__links__buttons:hover{
+    background-color: #272727;
+    color: #F6F6F6 ;
+    cursor: pointer;
 }
 
-h1{
-    font-family: "Krona One";
-}
 
-p{
-
-}
-
-a{
-
-}
 
 a:link{
     text-decoration: none;
@@ -99,10 +135,22 @@ a:visited{
     text-decoration: none;
 }
 
-/*IDS DE ELEMENTOS*/
-/*O # é usado para designar um id enquanto o . designa uma classe*/
-#titleStrong{
-    color: #22D4FD;
+.imagem{
+    padding: 0% 0% 0% 80px; /*top right botton left*/
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    line-height: normal;
+    color: black;
+    background:#22D4FD;
 }
 
 
